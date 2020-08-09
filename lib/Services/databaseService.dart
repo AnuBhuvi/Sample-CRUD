@@ -8,10 +8,6 @@ class MemberCollection {
     _memberCollection.add(memberData);
   }
 
-  // Stream<QuerySnapshot> getMembers() {
-  //   return _memberCollection.snapshots();
-  // }
-
   getMembers() async {
     QuerySnapshot qss = await _memberCollection.getDocuments();
     return qss.documents;
